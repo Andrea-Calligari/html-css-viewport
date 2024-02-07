@@ -5,9 +5,11 @@
     padding: 0;
 }   
 ul,
-ol, menu{
-     list-style-type: none;
-}
+ ol, menu{
+     list-style-type: circle;
+    
+     
+} 
  
 a{
     text-decoration: none;
@@ -15,44 +17,68 @@ a{
 }
 /* LAYOUT */
 .app{
-    width: 100%;
     background-color: rgb(95, 92, 93);
     height: 100vh;
     color: white;
     display: flex;
+    
    
 
 }
-
-
 .app header{
     background-color: black;
     padding: 20px;
-    width: 150px;
+    width: 300px;
     flex-shrink: 0;
 }
 .app main{
-    
+    background-color: #333;
     flex-grow: 1;
 }
 .app .section{
-    padding: 20px;    
+    padding:   
 }
-.row-col{
+.app .sub{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 10vh;
+    background-color: #191919;
 }
-.row{
+.app footer{
+    position: fixed;
+    height: 10vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: brown;
+    padding: 20px;
+}
+
+.row-wrap{
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+.row{
+    padding: 20px;
+    display: flex;
+}
+.row-col{
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    
 }
 .col-6{
     width: calc(6 * 100% / 12);
 }
 .col-4{
     width: calc(4 * 100% / 12);
+}
+.col-5{
+    width: calc(5 * 100% / 12);
 }
 .btn{
     padding: 10px;
@@ -61,9 +87,20 @@ a{
     background-color: white;
     color: black;
 }
-.app .sub{
-    height: 10vh;
-    background-color: #333;
-}
 
-   
+h2 + h4{
+    padding: 20px 0;
+   }
+
+h1{
+    padding: 20px;
+}
+.item li{
+    display: inline;
+}
+.col-6 ul{
+    padding: 20px;
+}
+.col{
+    width: 100%;
+}
